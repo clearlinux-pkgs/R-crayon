@@ -4,14 +4,12 @@
 #
 Name     : R-crayon
 Version  : 1.3.1
-Release  : 17
+Release  : 18
 URL      : http://cran.r-project.org/src/contrib/crayon_1.3.1.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/crayon_1.3.1.tar.gz
 Summary  : Colored Terminal Output
 Group    : Development/Tools
 License  : MIT
-Requires: R-memoise
-BuildRequires : R-memoise
 BuildRequires : clr-R-helpers
 
 %description
@@ -29,8 +27,10 @@ BuildRequires : clr-R-helpers
 %install
 rm -rf %{buildroot}
 export LANG=C
-export CFLAGS="$CFLAGS -O3 -flto -ffunction-sections -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -flto -ffunction-sections -fno-semantic-interposition "
+export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
@@ -42,7 +42,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library crayon || :
+R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library crayon
 
 
 %files
