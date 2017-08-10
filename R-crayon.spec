@@ -4,7 +4,7 @@
 #
 Name     : R-crayon
 Version  : 1.3.2
-Release  : 33
+Release  : 34
 URL      : http://cran.r-project.org/src/contrib/crayon_1.3.2.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/crayon_1.3.2.tar.gz
 Summary  : Colored Terminal Output
@@ -13,14 +13,10 @@ License  : MIT
 BuildRequires : clr-R-helpers
 
 %description
-<h1 align="center">
-<br>
-<br>
-<img width="400" src="./inst/logo.png" alt="crayon">
-<br>
-<br>
-<br>
-</h1>
+color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI'
+    color support is automatically detected. Colors and highlighting can
+    be combined and nested. New styles can also be created easily.
+    This package was inspired by the 'chalk' 'JavaScript' project.
 
 %prep
 %setup -q -c -n crayon
@@ -30,11 +26,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1496605062
+export SOURCE_DATE_EPOCH=1502398026
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1496605062
+export SOURCE_DATE_EPOCH=1502398026
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
