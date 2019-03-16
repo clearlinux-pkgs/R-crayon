@@ -4,7 +4,7 @@
 #
 Name     : R-crayon
 Version  : 1.3.4
-Release  : 54
+Release  : 55
 URL      : https://cran.r-project.org/src/contrib/crayon_1.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crayon_1.3.4.tar.gz
 Summary  : Colored Terminal Output
@@ -13,13 +13,17 @@ License  : MIT
 BuildRequires : R-mockery
 BuildRequires : R-rstudioapi
 BuildRequires : R-withr
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
-color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI'
-    color support is automatically detected. Colors and highlighting can
-    be combined and nested. New styles can also be created easily.
-    This package was inspired by the 'chalk' 'JavaScript' project.
+<h1 align="center">
+<br>
+<br>
+<img width="400" src="./inst/logo.png" alt="crayon">
+<br>
+<br>
+<br>
+</h1>
 
 %prep
 %setup -q -c -n crayon
@@ -29,11 +33,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523296530
+export SOURCE_DATE_EPOCH=1552731248
 
 %install
+export SOURCE_DATE_EPOCH=1552731248
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523296530
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library crayon|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  crayon || :
 
 
 %files
@@ -100,3 +103,15 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/crayon/html/R.css
 /usr/lib64/R/library/crayon/logo.png
 /usr/lib64/R/library/crayon/logo.svg.gz
+/usr/lib64/R/library/crayon/tests/testthat.R
+/usr/lib64/R/library/crayon/tests/testthat/test-ansi256.R
+/usr/lib64/R/library/crayon/tests/testthat/test-color.r
+/usr/lib64/R/library/crayon/tests/testthat/test-combine.R
+/usr/lib64/R/library/crayon/tests/testthat/test-has-color.r
+/usr/lib64/R/library/crayon/tests/testthat/test-has-style.r
+/usr/lib64/R/library/crayon/tests/testthat/test-make-style.r
+/usr/lib64/R/library/crayon/tests/testthat/test-operations.R
+/usr/lib64/R/library/crayon/tests/testthat/test-style-var.r
+/usr/lib64/R/library/crayon/tests/testthat/test-styles.r
+/usr/lib64/R/library/crayon/tests/testthat/test-utils.R
+/usr/lib64/R/library/crayon/tests/testthat/test-vectors.r
