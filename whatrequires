@@ -1,1 +1,26 @@
 # This file contains recursive sources that require this package
+R-SGP
+R-SGPdata
+R-cli
+R-covr
+R-cyclocomp
+R-debugme
+R-desc
+R-devtools
+R-diffobj
+R-lintr
+R-pillar
+R-pkgbuild
+R-pkgdown
+R-progress
+R-randomNames
+R-rcmdcheck
+R-readr
+R-rhub
+R-shiny
+R-taxize
+R-testthat
+R-tibble
+R-tidyverse
+R-toOrdinal
+R-usethis
