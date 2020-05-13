@@ -4,45 +4,38 @@
 #
 Name     : R-crayon
 Version  : 1.3.4
-Release  : 66
+Release  : 67
 URL      : https://cran.r-project.org/src/contrib/crayon_1.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crayon_1.3.4.tar.gz
 Summary  : Colored Terminal Output
 Group    : Development/Tools
 License  : MIT
-BuildRequires : R-mockery
-BuildRequires : R-rstudioapi
-BuildRequires : R-withr
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-<h1 align="center">
-<br>
-<br>
-<img width="400" src="./inst/logo.png" alt="crayon">
-<br>
-<br>
-<br>
-</h1>
+color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI'
+    color support is automatically detected. Colors and highlighting can
+    be combined and nested. New styles can also be created easily.
+    This package was inspired by the 'chalk' 'JavaScript' project.
 
 %prep
 %setup -q -c -n crayon
+cd %{_builddir}/crayon
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571813637
+export SOURCE_DATE_EPOCH=1589402545
 
 %install
-export SOURCE_DATE_EPOCH=1571813637
+export SOURCE_DATE_EPOCH=1589402545
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

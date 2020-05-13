@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+R-IRkernel
 R-SGP
 R-SGPdata
 R-cli
@@ -8,6 +9,7 @@ R-debugme
 R-desc
 R-devtools
 R-diffobj
+R-dtplyr
 R-lintr
 R-pillar
 R-pkgbuild
