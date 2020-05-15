@@ -4,7 +4,7 @@
 #
 Name     : R-crayon
 Version  : 1.3.4
-Release  : 67
+Release  : 68
 URL      : https://cran.r-project.org/src/contrib/crayon_1.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crayon_1.3.4.tar.gz
 Summary  : Colored Terminal Output
@@ -27,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589402545
+export SOURCE_DATE_EPOCH=1589508326
 
 %install
-export SOURCE_DATE_EPOCH=1589402545
+export SOURCE_DATE_EPOCH=1589508326
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
