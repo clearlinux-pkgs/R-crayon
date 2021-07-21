@@ -4,7 +4,7 @@
 #
 Name     : R-crayon
 Version  : 1.4.1
-Release  : 77
+Release  : 78
 URL      : https://cran.r-project.org/src/contrib/crayon_1.4.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crayon_1.4.1.tar.gz
 Summary  : Colored Terminal Output
