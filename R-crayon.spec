@@ -4,7 +4,7 @@
 #
 Name     : R-crayon
 Version  : 1.5.2
-Release  : 91
+Release  : 92
 URL      : https://cran.r-project.org/src/contrib/crayon_1.5.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crayon_1.5.2.tar.gz
 Summary  : Colored Terminal Output
